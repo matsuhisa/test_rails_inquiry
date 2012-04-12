@@ -61,7 +61,10 @@ class ResultsController < ApplicationController
 
     respond_to do |format|
       if @result.save
-        format.html { redirect_to root_url, :notice => 'Result was successfully created.' }
+		 
+		format.html {redirect_to :action => "index"}
+		#format.html
+        #format.html { redirect_to root_url, :notice => 'Result was successfully created.' }
         #format.html { redirect_to @result, :notice => 'Result was successfully created.' }
         #format.json { render :json => @result, :status => :created, :location => @result }
       else
